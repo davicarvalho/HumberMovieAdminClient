@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/GenreWebService?wsdl" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/GenreWebService.wsdl"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/GenreWebService?xsd=1" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/GenreWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/MovieWebService?wsdl" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/MovieWebService.wsdl"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/MovieWebService?xsd=1" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/MovieWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/TvShowWebService?wsdl" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/TvShowWebService.wsdl"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/TvShowWebService?xsd=1" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/TvShowWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/SeasonWebService?wsdl" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/SeasonWebService.wsdl"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/SeasonWebService?xsd=1" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/SeasonWebService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/EpisodeWebService?wsdl" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/EpisodeWebService.wsdl"/>
+    <system systemId="http://localhost:8080/My-IMDb-SOAP-WS/EpisodeWebService?xsd=1" uri="wsdl/localhost_8080/My-IMDb-SOAP-WS/EpisodeWebService.xsd_1.xsd"/>
+</catalog>
