@@ -22,6 +22,7 @@
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/AddTvShow.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/ListEpisodes.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/AddGenreResponse.java
+/Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/FindEpisodeBySeasonResponse.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/DeleteTvShowResponse.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/src/main/java/servlets/tvShow/TvShowServlet.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/MovieWebService.java
@@ -36,6 +37,7 @@
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/src/main/java/servlets/genre/UpdateGenre.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/ListGenres.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/FindTvShowResponse.java
+/Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/FindEpisodeBySeason.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/UpdateSeason.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/DeleteGenre.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/UpdateTvShow.java
@@ -46,7 +48,9 @@
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/AddGenre.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/ListTvShows.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/FindGenre.java
+/Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/FindSeasonsByShow.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/UpdateEpisodeResponse.java
+/Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/FindSeasonsByShowResponse.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/Season.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/target/generated-sources/jaxws-wsimport/services/ObjectFactory.java
 /Users/davicarvalho/Documents/Development/Java/NetBeansWorkspaces/Enterprise/assignment/My-IMDb-admin-web-client/src/main/java/servlets/tvShow/AddTvShow.java

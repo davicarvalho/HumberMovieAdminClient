@@ -27,21 +27,6 @@ public interface MovieWebService {
 
     /**
      * 
-     * @param movie
-     * @return
-     *     returns services.Movie
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addMovie", targetNamespace = "http://services/", className = "services.AddMovie")
-    @ResponseWrapper(localName = "addMovieResponse", targetNamespace = "http://services/", className = "services.AddMovieResponse")
-    @Action(input = "http://services/MovieWebService/addMovieRequest", output = "http://services/MovieWebService/addMovieResponse")
-    public Movie addMovie(
-        @WebParam(name = "movie", targetNamespace = "")
-        Movie movie);
-
-    /**
-     * 
      * @param id
      * @return
      *     returns services.Movie
@@ -96,5 +81,20 @@ public interface MovieWebService {
     public Movie deleteMovie(
         @WebParam(name = "id", targetNamespace = "")
         Integer id);
+
+    /**
+     * 
+     * @param movie
+     * @return
+     *     returns services.Movie
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "addMovie", targetNamespace = "http://services/", className = "services.AddMovie")
+    @ResponseWrapper(localName = "addMovieResponse", targetNamespace = "http://services/", className = "services.AddMovieResponse")
+    @Action(input = "http://services/MovieWebService/addMovieRequest", output = "http://services/MovieWebService/addMovieResponse")
+    public Movie addMovie(
+        @WebParam(name = "movie", targetNamespace = "")
+        Movie movie);
 
 }

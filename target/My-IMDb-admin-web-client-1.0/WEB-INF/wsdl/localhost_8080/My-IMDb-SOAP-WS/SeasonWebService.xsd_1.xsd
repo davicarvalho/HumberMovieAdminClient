@@ -12,6 +12,10 @@
 
 <xs:element name="findSeasonResponse" type="tns:findSeasonResponse"/>
 
+<xs:element name="findSeasonsByShow" type="tns:findSeasonsByShow"/>
+
+<xs:element name="findSeasonsByShowResponse" type="tns:findSeasonsByShowResponse"/>
+
 <xs:element name="genre" type="tns:genre"/>
 
 <xs:element name="listSeasons" type="tns:listSeasons"/>
@@ -26,9 +30,15 @@
 
 <xs:element name="updateSeasonResponse" type="tns:updateSeasonResponse"/>
 
-<xs:complexType name="addSeason">
+<xs:complexType name="findSeasonsByShow">
 <xs:sequence>
-<xs:element name="season" type="tns:season" minOccurs="0"/>
+<xs:element name="id" type="xs:int" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="findSeasonsByShowResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:season" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -55,6 +65,12 @@
 <xs:sequence>
 <xs:element name="id" type="xs:int" minOccurs="0"/>
 <xs:element name="name" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addSeason">
+<xs:sequence>
+<xs:element name="season" type="tns:season" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 

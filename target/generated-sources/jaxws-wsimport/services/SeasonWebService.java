@@ -27,21 +27,6 @@ public interface SeasonWebService {
 
     /**
      * 
-     * @param season
-     * @return
-     *     returns services.Season
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "addSeason", targetNamespace = "http://services/", className = "services.AddSeason")
-    @ResponseWrapper(localName = "addSeasonResponse", targetNamespace = "http://services/", className = "services.AddSeasonResponse")
-    @Action(input = "http://services/SeasonWebService/addSeasonRequest", output = "http://services/SeasonWebService/addSeasonResponse")
-    public Season addSeason(
-        @WebParam(name = "season", targetNamespace = "")
-        Season season);
-
-    /**
-     * 
      * @param id
      * @return
      *     returns services.Season
@@ -57,15 +42,18 @@ public interface SeasonWebService {
 
     /**
      * 
+     * @param season
      * @return
-     *     returns java.util.List<services.Season>
+     *     returns services.Season
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "listSeasons", targetNamespace = "http://services/", className = "services.ListSeasons")
-    @ResponseWrapper(localName = "listSeasonsResponse", targetNamespace = "http://services/", className = "services.ListSeasonsResponse")
-    @Action(input = "http://services/SeasonWebService/listSeasonsRequest", output = "http://services/SeasonWebService/listSeasonsResponse")
-    public List<Season> listSeasons();
+    @RequestWrapper(localName = "addSeason", targetNamespace = "http://services/", className = "services.AddSeason")
+    @ResponseWrapper(localName = "addSeasonResponse", targetNamespace = "http://services/", className = "services.AddSeasonResponse")
+    @Action(input = "http://services/SeasonWebService/addSeasonRequest", output = "http://services/SeasonWebService/addSeasonResponse")
+    public Season addSeason(
+        @WebParam(name = "season", targetNamespace = "")
+        Season season);
 
     /**
      * 
@@ -84,6 +72,18 @@ public interface SeasonWebService {
 
     /**
      * 
+     * @return
+     *     returns java.util.List<services.Season>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "listSeasons", targetNamespace = "http://services/", className = "services.ListSeasons")
+    @ResponseWrapper(localName = "listSeasonsResponse", targetNamespace = "http://services/", className = "services.ListSeasonsResponse")
+    @Action(input = "http://services/SeasonWebService/listSeasonsRequest", output = "http://services/SeasonWebService/listSeasonsResponse")
+    public List<Season> listSeasons();
+
+    /**
+     * 
      * @param id
      * @return
      *     returns services.Season
@@ -94,6 +94,21 @@ public interface SeasonWebService {
     @ResponseWrapper(localName = "deleteSeasonResponse", targetNamespace = "http://services/", className = "services.DeleteSeasonResponse")
     @Action(input = "http://services/SeasonWebService/deleteSeasonRequest", output = "http://services/SeasonWebService/deleteSeasonResponse")
     public Season deleteSeason(
+        @WebParam(name = "id", targetNamespace = "")
+        Integer id);
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns java.util.List<services.Season>
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findSeasonsByShow", targetNamespace = "http://services/", className = "services.FindSeasonsByShow")
+    @ResponseWrapper(localName = "findSeasonsByShowResponse", targetNamespace = "http://services/", className = "services.FindSeasonsByShowResponse")
+    @Action(input = "http://services/SeasonWebService/findSeasonsByShowRequest", output = "http://services/SeasonWebService/findSeasonsByShowResponse")
+    public List<Season> findSeasonsByShow(
         @WebParam(name = "id", targetNamespace = "")
         Integer id);
 

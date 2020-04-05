@@ -24,6 +24,7 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
+    private final static QName _FindEpisodeBySeasonResponse_QNAME = new QName("http://services/", "findEpisodeBySeasonResponse");
     private final static QName _Genre_QNAME = new QName("http://services/", "genre");
     private final static QName _Season_QNAME = new QName("http://services/", "season");
     private final static QName _DeleteEpisodeResponse_QNAME = new QName("http://services/", "deleteEpisodeResponse");
@@ -34,6 +35,7 @@ public class ObjectFactory {
     private final static QName _ListEpisodes_QNAME = new QName("http://services/", "listEpisodes");
     private final static QName _DeleteEpisode_QNAME = new QName("http://services/", "deleteEpisode");
     private final static QName _UpdateEpisodeResponse_QNAME = new QName("http://services/", "updateEpisodeResponse");
+    private final static QName _FindEpisodeBySeason_QNAME = new QName("http://services/", "findEpisodeBySeason");
     private final static QName _AddEpisodeResponse_QNAME = new QName("http://services/", "addEpisodeResponse");
     private final static QName _TvShow_QNAME = new QName("http://services/", "tvShow");
     private final static QName _FindEpisode_QNAME = new QName("http://services/", "findEpisode");
@@ -52,6 +54,14 @@ public class ObjectFactory {
      */
     public UpdateEpisodeResponse createUpdateEpisodeResponse() {
         return new UpdateEpisodeResponse();
+    }
+
+    /**
+     * Create an instance of {@link FindEpisodeBySeason }
+     * 
+     */
+    public FindEpisodeBySeason createFindEpisodeBySeason() {
+        return new FindEpisodeBySeason();
     }
 
     /**
@@ -135,6 +145,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link FindEpisodeBySeasonResponse }
+     * 
+     */
+    public FindEpisodeBySeasonResponse createFindEpisodeBySeasonResponse() {
+        return new FindEpisodeBySeasonResponse();
+    }
+
+    /**
      * Create an instance of {@link Genre }
      * 
      */
@@ -156,6 +174,15 @@ public class ObjectFactory {
      */
     public DeleteEpisodeResponse createDeleteEpisodeResponse() {
         return new DeleteEpisodeResponse();
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindEpisodeBySeasonResponse }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "findEpisodeBySeasonResponse")
+    public JAXBElement<FindEpisodeBySeasonResponse> createFindEpisodeBySeasonResponse(FindEpisodeBySeasonResponse value) {
+        return new JAXBElement<FindEpisodeBySeasonResponse>(_FindEpisodeBySeasonResponse_QNAME, FindEpisodeBySeasonResponse.class, null, value);
     }
 
     /**
@@ -246,6 +273,15 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://services/", name = "updateEpisodeResponse")
     public JAXBElement<UpdateEpisodeResponse> createUpdateEpisodeResponse(UpdateEpisodeResponse value) {
         return new JAXBElement<UpdateEpisodeResponse>(_UpdateEpisodeResponse_QNAME, UpdateEpisodeResponse.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link FindEpisodeBySeason }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://services/", name = "findEpisodeBySeason")
+    public JAXBElement<FindEpisodeBySeason> createFindEpisodeBySeason(FindEpisodeBySeason value) {
+        return new JAXBElement<FindEpisodeBySeason>(_FindEpisodeBySeason_QNAME, FindEpisodeBySeason.class, null, value);
     }
 
     /**

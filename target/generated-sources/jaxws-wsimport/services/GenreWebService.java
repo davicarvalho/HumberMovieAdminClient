@@ -42,21 +42,6 @@ public interface GenreWebService {
 
     /**
      * 
-     * @param id
-     * @return
-     *     returns services.Genre
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findGenre", targetNamespace = "http://services/", className = "services.FindGenre")
-    @ResponseWrapper(localName = "findGenreResponse", targetNamespace = "http://services/", className = "services.FindGenreResponse")
-    @Action(input = "http://services/GenreWebService/findGenreRequest", output = "http://services/GenreWebService/findGenreResponse")
-    public Genre findGenre(
-        @WebParam(name = "id", targetNamespace = "")
-        Integer id);
-
-    /**
-     * 
      * @return
      *     returns java.util.List<services.Genre>
      */
@@ -94,6 +79,21 @@ public interface GenreWebService {
     @ResponseWrapper(localName = "deleteGenreResponse", targetNamespace = "http://services/", className = "services.DeleteGenreResponse")
     @Action(input = "http://services/GenreWebService/deleteGenreRequest", output = "http://services/GenreWebService/deleteGenreResponse")
     public Genre deleteGenre(
+        @WebParam(name = "id", targetNamespace = "")
+        Integer id);
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns services.Genre
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findGenre", targetNamespace = "http://services/", className = "services.FindGenre")
+    @ResponseWrapper(localName = "findGenreResponse", targetNamespace = "http://services/", className = "services.FindGenreResponse")
+    @Action(input = "http://services/GenreWebService/findGenreRequest", output = "http://services/GenreWebService/findGenreResponse")
+    public Genre findGenre(
         @WebParam(name = "id", targetNamespace = "")
         Integer id);
 

@@ -29,14 +29,14 @@ public interface EpisodeWebService {
      * 
      * @param id
      * @return
-     *     returns services.Episode
+     *     returns java.util.List<services.Episode>
      */
     @WebMethod
     @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "findEpisode", targetNamespace = "http://services/", className = "services.FindEpisode")
-    @ResponseWrapper(localName = "findEpisodeResponse", targetNamespace = "http://services/", className = "services.FindEpisodeResponse")
-    @Action(input = "http://services/EpisodeWebService/findEpisodeRequest", output = "http://services/EpisodeWebService/findEpisodeResponse")
-    public Episode findEpisode(
+    @RequestWrapper(localName = "findEpisodeBySeason", targetNamespace = "http://services/", className = "services.FindEpisodeBySeason")
+    @ResponseWrapper(localName = "findEpisodeBySeasonResponse", targetNamespace = "http://services/", className = "services.FindEpisodeBySeasonResponse")
+    @Action(input = "http://services/EpisodeWebService/findEpisodeBySeasonRequest", output = "http://services/EpisodeWebService/findEpisodeBySeasonResponse")
+    public List<Episode> findEpisodeBySeason(
         @WebParam(name = "id", targetNamespace = "")
         Integer id);
 
@@ -54,6 +54,36 @@ public interface EpisodeWebService {
     public Episode addEpisode(
         @WebParam(name = "episode", targetNamespace = "")
         Episode episode);
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns services.Episode
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "deleteEpisode", targetNamespace = "http://services/", className = "services.DeleteEpisode")
+    @ResponseWrapper(localName = "deleteEpisodeResponse", targetNamespace = "http://services/", className = "services.DeleteEpisodeResponse")
+    @Action(input = "http://services/EpisodeWebService/deleteEpisodeRequest", output = "http://services/EpisodeWebService/deleteEpisodeResponse")
+    public Episode deleteEpisode(
+        @WebParam(name = "id", targetNamespace = "")
+        Integer id);
+
+    /**
+     * 
+     * @param id
+     * @return
+     *     returns services.Episode
+     */
+    @WebMethod
+    @WebResult(targetNamespace = "")
+    @RequestWrapper(localName = "findEpisode", targetNamespace = "http://services/", className = "services.FindEpisode")
+    @ResponseWrapper(localName = "findEpisodeResponse", targetNamespace = "http://services/", className = "services.FindEpisodeResponse")
+    @Action(input = "http://services/EpisodeWebService/findEpisodeRequest", output = "http://services/EpisodeWebService/findEpisodeResponse")
+    public Episode findEpisode(
+        @WebParam(name = "id", targetNamespace = "")
+        Integer id);
 
     /**
      * 
@@ -81,20 +111,5 @@ public interface EpisodeWebService {
     public Episode updateEpisode(
         @WebParam(name = "name", targetNamespace = "")
         Episode name);
-
-    /**
-     * 
-     * @param id
-     * @return
-     *     returns services.Episode
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "deleteEpisode", targetNamespace = "http://services/", className = "services.DeleteEpisode")
-    @ResponseWrapper(localName = "deleteEpisodeResponse", targetNamespace = "http://services/", className = "services.DeleteEpisodeResponse")
-    @Action(input = "http://services/EpisodeWebService/deleteEpisodeRequest", output = "http://services/EpisodeWebService/deleteEpisodeResponse")
-    public Episode deleteEpisode(
-        @WebParam(name = "id", targetNamespace = "")
-        Integer id);
 
 }

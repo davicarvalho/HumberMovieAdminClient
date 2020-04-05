@@ -4,17 +4,29 @@
 <xsd:import namespace="http://services/" schemaLocation="http://localhost:8080/My-IMDb-SOAP-WS/EpisodeWebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="findEpisode">
-<part name="parameters" element="tns:findEpisode"/>
+<message name="findEpisodeBySeason">
+<part name="parameters" element="tns:findEpisodeBySeason"/>
 </message>
-<message name="findEpisodeResponse">
-<part name="parameters" element="tns:findEpisodeResponse"/>
+<message name="findEpisodeBySeasonResponse">
+<part name="parameters" element="tns:findEpisodeBySeasonResponse"/>
 </message>
 <message name="addEpisode">
 <part name="parameters" element="tns:addEpisode"/>
 </message>
 <message name="addEpisodeResponse">
 <part name="parameters" element="tns:addEpisodeResponse"/>
+</message>
+<message name="deleteEpisode">
+<part name="parameters" element="tns:deleteEpisode"/>
+</message>
+<message name="deleteEpisodeResponse">
+<part name="parameters" element="tns:deleteEpisodeResponse"/>
+</message>
+<message name="findEpisode">
+<part name="parameters" element="tns:findEpisode"/>
+</message>
+<message name="findEpisodeResponse">
+<part name="parameters" element="tns:findEpisodeResponse"/>
 </message>
 <message name="listEpisodes">
 <part name="parameters" element="tns:listEpisodes"/>
@@ -28,20 +40,22 @@
 <message name="updateEpisodeResponse">
 <part name="parameters" element="tns:updateEpisodeResponse"/>
 </message>
-<message name="deleteEpisode">
-<part name="parameters" element="tns:deleteEpisode"/>
-</message>
-<message name="deleteEpisodeResponse">
-<part name="parameters" element="tns:deleteEpisodeResponse"/>
-</message>
 <portType name="EpisodeWebService">
-<operation name="findEpisode">
-<input wsam:Action="http://services/EpisodeWebService/findEpisodeRequest" message="tns:findEpisode"/>
-<output wsam:Action="http://services/EpisodeWebService/findEpisodeResponse" message="tns:findEpisodeResponse"/>
+<operation name="findEpisodeBySeason">
+<input wsam:Action="http://services/EpisodeWebService/findEpisodeBySeasonRequest" message="tns:findEpisodeBySeason"/>
+<output wsam:Action="http://services/EpisodeWebService/findEpisodeBySeasonResponse" message="tns:findEpisodeBySeasonResponse"/>
 </operation>
 <operation name="addEpisode">
 <input wsam:Action="http://services/EpisodeWebService/addEpisodeRequest" message="tns:addEpisode"/>
 <output wsam:Action="http://services/EpisodeWebService/addEpisodeResponse" message="tns:addEpisodeResponse"/>
+</operation>
+<operation name="deleteEpisode">
+<input wsam:Action="http://services/EpisodeWebService/deleteEpisodeRequest" message="tns:deleteEpisode"/>
+<output wsam:Action="http://services/EpisodeWebService/deleteEpisodeResponse" message="tns:deleteEpisodeResponse"/>
+</operation>
+<operation name="findEpisode">
+<input wsam:Action="http://services/EpisodeWebService/findEpisodeRequest" message="tns:findEpisode"/>
+<output wsam:Action="http://services/EpisodeWebService/findEpisodeResponse" message="tns:findEpisodeResponse"/>
 </operation>
 <operation name="listEpisodes">
 <input wsam:Action="http://services/EpisodeWebService/listEpisodesRequest" message="tns:listEpisodes"/>
@@ -51,14 +65,10 @@
 <input wsam:Action="http://services/EpisodeWebService/updateEpisodeRequest" message="tns:updateEpisode"/>
 <output wsam:Action="http://services/EpisodeWebService/updateEpisodeResponse" message="tns:updateEpisodeResponse"/>
 </operation>
-<operation name="deleteEpisode">
-<input wsam:Action="http://services/EpisodeWebService/deleteEpisodeRequest" message="tns:deleteEpisode"/>
-<output wsam:Action="http://services/EpisodeWebService/deleteEpisodeResponse" message="tns:deleteEpisodeResponse"/>
-</operation>
 </portType>
 <binding name="EpisodeWebServicePortBinding" type="tns:EpisodeWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="findEpisode">
+<operation name="findEpisodeBySeason">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -68,6 +78,24 @@
 </output>
 </operation>
 <operation name="addEpisode">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="deleteEpisode">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findEpisode">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -86,15 +114,6 @@
 </output>
 </operation>
 <operation name="updateEpisode">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="deleteEpisode">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

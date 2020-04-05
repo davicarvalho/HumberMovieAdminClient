@@ -4,12 +4,6 @@
 <xsd:import namespace="http://services/" schemaLocation="http://localhost:8080/My-IMDb-SOAP-WS/MovieWebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="addMovie">
-<part name="parameters" element="tns:addMovie"/>
-</message>
-<message name="addMovieResponse">
-<part name="parameters" element="tns:addMovieResponse"/>
-</message>
 <message name="findMovie">
 <part name="parameters" element="tns:findMovie"/>
 </message>
@@ -34,11 +28,13 @@
 <message name="deleteMovieResponse">
 <part name="parameters" element="tns:deleteMovieResponse"/>
 </message>
+<message name="addMovie">
+<part name="parameters" element="tns:addMovie"/>
+</message>
+<message name="addMovieResponse">
+<part name="parameters" element="tns:addMovieResponse"/>
+</message>
 <portType name="MovieWebService">
-<operation name="addMovie">
-<input wsam:Action="http://services/MovieWebService/addMovieRequest" message="tns:addMovie"/>
-<output wsam:Action="http://services/MovieWebService/addMovieResponse" message="tns:addMovieResponse"/>
-</operation>
 <operation name="findMovie">
 <input wsam:Action="http://services/MovieWebService/findMovieRequest" message="tns:findMovie"/>
 <output wsam:Action="http://services/MovieWebService/findMovieResponse" message="tns:findMovieResponse"/>
@@ -55,18 +51,13 @@
 <input wsam:Action="http://services/MovieWebService/deleteMovieRequest" message="tns:deleteMovie"/>
 <output wsam:Action="http://services/MovieWebService/deleteMovieResponse" message="tns:deleteMovieResponse"/>
 </operation>
+<operation name="addMovie">
+<input wsam:Action="http://services/MovieWebService/addMovieRequest" message="tns:addMovie"/>
+<output wsam:Action="http://services/MovieWebService/addMovieResponse" message="tns:addMovieResponse"/>
+</operation>
 </portType>
 <binding name="MovieWebServicePortBinding" type="tns:MovieWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="addMovie">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="findMovie">
 <soap:operation soapAction=""/>
 <input>
@@ -95,6 +86,15 @@
 </output>
 </operation>
 <operation name="deleteMovie">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="addMovie">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

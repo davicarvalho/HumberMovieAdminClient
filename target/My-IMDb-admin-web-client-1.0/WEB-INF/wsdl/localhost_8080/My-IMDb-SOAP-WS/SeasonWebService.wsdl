@@ -4,23 +4,17 @@
 <xsd:import namespace="http://services/" schemaLocation="http://localhost:8080/My-IMDb-SOAP-WS/SeasonWebService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="addSeason">
-<part name="parameters" element="tns:addSeason"/>
-</message>
-<message name="addSeasonResponse">
-<part name="parameters" element="tns:addSeasonResponse"/>
-</message>
 <message name="findSeason">
 <part name="parameters" element="tns:findSeason"/>
 </message>
 <message name="findSeasonResponse">
 <part name="parameters" element="tns:findSeasonResponse"/>
 </message>
-<message name="listSeasons">
-<part name="parameters" element="tns:listSeasons"/>
+<message name="addSeason">
+<part name="parameters" element="tns:addSeason"/>
 </message>
-<message name="listSeasonsResponse">
-<part name="parameters" element="tns:listSeasonsResponse"/>
+<message name="addSeasonResponse">
+<part name="parameters" element="tns:addSeasonResponse"/>
 </message>
 <message name="updateSeason">
 <part name="parameters" element="tns:updateSeason"/>
@@ -28,45 +22,52 @@
 <message name="updateSeasonResponse">
 <part name="parameters" element="tns:updateSeasonResponse"/>
 </message>
+<message name="listSeasons">
+<part name="parameters" element="tns:listSeasons"/>
+</message>
+<message name="listSeasonsResponse">
+<part name="parameters" element="tns:listSeasonsResponse"/>
+</message>
 <message name="deleteSeason">
 <part name="parameters" element="tns:deleteSeason"/>
 </message>
 <message name="deleteSeasonResponse">
 <part name="parameters" element="tns:deleteSeasonResponse"/>
 </message>
+<message name="findSeasonsByShow">
+<part name="parameters" element="tns:findSeasonsByShow"/>
+</message>
+<message name="findSeasonsByShowResponse">
+<part name="parameters" element="tns:findSeasonsByShowResponse"/>
+</message>
 <portType name="SeasonWebService">
-<operation name="addSeason">
-<input wsam:Action="http://services/SeasonWebService/addSeasonRequest" message="tns:addSeason"/>
-<output wsam:Action="http://services/SeasonWebService/addSeasonResponse" message="tns:addSeasonResponse"/>
-</operation>
 <operation name="findSeason">
 <input wsam:Action="http://services/SeasonWebService/findSeasonRequest" message="tns:findSeason"/>
 <output wsam:Action="http://services/SeasonWebService/findSeasonResponse" message="tns:findSeasonResponse"/>
 </operation>
-<operation name="listSeasons">
-<input wsam:Action="http://services/SeasonWebService/listSeasonsRequest" message="tns:listSeasons"/>
-<output wsam:Action="http://services/SeasonWebService/listSeasonsResponse" message="tns:listSeasonsResponse"/>
+<operation name="addSeason">
+<input wsam:Action="http://services/SeasonWebService/addSeasonRequest" message="tns:addSeason"/>
+<output wsam:Action="http://services/SeasonWebService/addSeasonResponse" message="tns:addSeasonResponse"/>
 </operation>
 <operation name="updateSeason">
 <input wsam:Action="http://services/SeasonWebService/updateSeasonRequest" message="tns:updateSeason"/>
 <output wsam:Action="http://services/SeasonWebService/updateSeasonResponse" message="tns:updateSeasonResponse"/>
 </operation>
+<operation name="listSeasons">
+<input wsam:Action="http://services/SeasonWebService/listSeasonsRequest" message="tns:listSeasons"/>
+<output wsam:Action="http://services/SeasonWebService/listSeasonsResponse" message="tns:listSeasonsResponse"/>
+</operation>
 <operation name="deleteSeason">
 <input wsam:Action="http://services/SeasonWebService/deleteSeasonRequest" message="tns:deleteSeason"/>
 <output wsam:Action="http://services/SeasonWebService/deleteSeasonResponse" message="tns:deleteSeasonResponse"/>
 </operation>
+<operation name="findSeasonsByShow">
+<input wsam:Action="http://services/SeasonWebService/findSeasonsByShowRequest" message="tns:findSeasonsByShow"/>
+<output wsam:Action="http://services/SeasonWebService/findSeasonsByShowResponse" message="tns:findSeasonsByShowResponse"/>
+</operation>
 </portType>
 <binding name="SeasonWebServicePortBinding" type="tns:SeasonWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="addSeason">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="findSeason">
 <soap:operation soapAction=""/>
 <input>
@@ -76,7 +77,7 @@
 <soap:body use="literal"/>
 </output>
 </operation>
-<operation name="listSeasons">
+<operation name="addSeason">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -94,7 +95,25 @@
 <soap:body use="literal"/>
 </output>
 </operation>
+<operation name="listSeasons">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
 <operation name="deleteSeason">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findSeasonsByShow">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

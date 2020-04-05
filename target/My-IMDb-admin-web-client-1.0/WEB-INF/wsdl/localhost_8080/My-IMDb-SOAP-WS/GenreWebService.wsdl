@@ -10,12 +10,6 @@
 <message name="addGenreResponse">
 <part name="parameters" element="tns:addGenreResponse"/>
 </message>
-<message name="findGenre">
-<part name="parameters" element="tns:findGenre"/>
-</message>
-<message name="findGenreResponse">
-<part name="parameters" element="tns:findGenreResponse"/>
-</message>
 <message name="listGenres">
 <part name="parameters" element="tns:listGenres"/>
 </message>
@@ -34,14 +28,16 @@
 <message name="deleteGenreResponse">
 <part name="parameters" element="tns:deleteGenreResponse"/>
 </message>
+<message name="findGenre">
+<part name="parameters" element="tns:findGenre"/>
+</message>
+<message name="findGenreResponse">
+<part name="parameters" element="tns:findGenreResponse"/>
+</message>
 <portType name="GenreWebService">
 <operation name="addGenre">
 <input wsam:Action="http://services/GenreWebService/addGenreRequest" message="tns:addGenre"/>
 <output wsam:Action="http://services/GenreWebService/addGenreResponse" message="tns:addGenreResponse"/>
-</operation>
-<operation name="findGenre">
-<input wsam:Action="http://services/GenreWebService/findGenreRequest" message="tns:findGenre"/>
-<output wsam:Action="http://services/GenreWebService/findGenreResponse" message="tns:findGenreResponse"/>
 </operation>
 <operation name="listGenres">
 <input wsam:Action="http://services/GenreWebService/listGenresRequest" message="tns:listGenres"/>
@@ -55,19 +51,14 @@
 <input wsam:Action="http://services/GenreWebService/deleteGenreRequest" message="tns:deleteGenre"/>
 <output wsam:Action="http://services/GenreWebService/deleteGenreResponse" message="tns:deleteGenreResponse"/>
 </operation>
+<operation name="findGenre">
+<input wsam:Action="http://services/GenreWebService/findGenreRequest" message="tns:findGenre"/>
+<output wsam:Action="http://services/GenreWebService/findGenreResponse" message="tns:findGenreResponse"/>
+</operation>
 </portType>
 <binding name="GenreWebServicePortBinding" type="tns:GenreWebService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
 <operation name="addGenre">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="findGenre">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
@@ -95,6 +86,15 @@
 </output>
 </operation>
 <operation name="deleteGenre">
+<soap:operation soapAction=""/>
+<input>
+<soap:body use="literal"/>
+</input>
+<output>
+<soap:body use="literal"/>
+</output>
+</operation>
+<operation name="findGenre">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>
